@@ -1,79 +1,25 @@
-<header>
-    <div class="mini-navbar-wrap">
-        <div class="logo-wrap">
-            <p class="logo"><span class="logo">Recipe Diary</span></p>
-        </div>
-        <div class="mini-navbar">
-            <!-- <ul *ngIf="!isLoggedIn; else loggedInTemplate">
-          <li>
-            <a routerLink="/auth/login">Login</a>
-          </li>
-          <li>
-            <a routerLink="/auth/register">Register</a>
-          </li>
-        </ul> -->
-
-
-
-            <!-- <ng-template [ngIf]="!isLoggedIn" [ngIfElse]="loggedInTemplate">
-          <ul>
-            <li>
-              <a routerLink="/auth/login">Login</a>
-            </li>
-            <li>
-              <a routerLink="/auth/register">Register</a>
-            </li>
-          </ul>
-        </ng-template>
-  
-        <ng-template #loggedInTemplate>
-          <ul *ngIf="isLoggedIn">
-            <li>
-              <a routerLink="/auth/profile">{{user?.fistName}}'s profile</a>
-            </li>
-            <li>
-              <a routerLink="/auth/logout">Logout</a>
-            </li>
-          </ul>
-        </ng-template> -->
-
-            <ng-template #loggedOutTemplate>
-                <ul>
-                    <li>
-                        <a routerLink="/login">Login</a>
-                    </li>
-                    <li>
-                        <a routerLink="/register">Register</a>
-                    </li>
-                </ul>
-            </ng-template>
-
-            <ng-template #loggedInTemplate>
-                <ul>
-                    <li>
-                        <!-- <a routerLink="/auth/profile">{{user?.username}}'s profile</a> -->
-                    </li>
-                    <li>
-                        <a routerLink="/logout">Logout</a>
-                    </li>
-                </ul>
-            </ng-template>
-
-            <!-- <ng-container *ngTemplateOutlet="isLoggedIn ? loggedInTemplate : loggedOutTemplate"></ng-container> -->
-        </div>
+<mat-toolbar>
+  <div class="logo-wrap col-center">
+    <p class="logo"><span class="logo">Recipe Diary</span></p>
+  </div>
+  <div class="container">
+    <div class="flex-row header-inner">
+      <div class="header-column col-center">
+        <a mat-button routerLink="/">Home</a>
+        <a mat-button routerLink="/recipe/main"> All Recipes</a>
+        <a mat-button routerLink="/about"> About</a>
+        <a mat-button routerLink="/contacts"> Contact</a>
+      </div>
+      <div class="header-column col-rigth">
+        <a mat-button routerLink="/login">Login</a>
+        <a mat-button routerLink="/register">Register</a>
+      </div>
+      <div class="header-column col-right">
+        <a mat-button routerLink="/recipe/new">Create Recipe</a>
+        <a mat-button routerLink="/profile">Profile</a>
+        <a mat-button routerLink="/logout">Logout</a>
+      </div>
     </div>
-    <nav>
-        <ul>
-            <li>
-                <a routerLink="/">Home</a>
-            </li>
-            <li>
-                <a routerLink="/recipe/recent">Recipes</a>
-            </li>
-            <li>
-                <a routerLink="/recipe/new">Add Recipe</a>
-            </li>
-        </ul>
-    </nav>
+  </div>
 
-</header>
+</mat-toolbar>
