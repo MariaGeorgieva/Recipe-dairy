@@ -1,31 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RecipeModule } from './recipe/recipe.module';
-import { AuthModule } from './auth/auth.module';
-import { CoreModule } from './core/core.module';
-
-
+import { NavigationComponent } from './core/navigation/navigation.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { HomeComponent } from './core/home/home.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { LogoutComponent } from './auth/logout/logout.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        //RecipeModule module first to work child routing
-        AuthModule,
-        RecipeModule,
-        CoreModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-    
-
-    ]
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    FooterComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    RegisterComponent,
+    LoginComponent,
+    LogoutComponent,
+    ProfileComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
